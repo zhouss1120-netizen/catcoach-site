@@ -1,0 +1,33 @@
+name: Publish CatCoach to Cloudflare
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: cloudflare-production
+  cancel-in-progress: false
+jobs:
+  deploy:
+    if: vars.CATCOACH_SITE_HOST == 'cloudflare'
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Prepare public files
+        run: |
+          mkdir -p _site
+          cp *.html *.css .nojekyll _worker.js _routes.json _headers _redirects wrangler.toml _site/
+          cp -R assets _site/
+      - name: Install pinned deployment tool
+        run: npm install --prefix "$RUNNER_TEMP/catcoach-tools" wrangler@4.42.0 --no-audit --no-fund
+      - name: Deploy website and API binding
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          node "$RUNNER_TEMP/catcoach-tools/node_modules/wrangler/bin/wrangler.js" pages deploy "$GITHUB_WORKSPACE/_site" --cwd "$GITHUB_WORKSPACE/_site" --project-name catcoach --branch main
