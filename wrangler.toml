@@ -1,0 +1,7 @@
+name = "catcoach"
+pages_build_output_dir = "."
+compatibility_date = "2025-04-07"
+
+[[services]]
+binding = "CATCOACH_API"
+service = "catcoach-api"

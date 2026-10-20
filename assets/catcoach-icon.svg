@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CatCoach 应用图标：猫脸 + 逐级上升的进度路径（训练计划与可见的改善）。
+     改编自 CatFix 未采用的备选稿 option-03，换成 CatCoach 的暖橙主色，与 CatFix 正式标识区分。
+     满版正方形、无透明、无圆角：圆角由系统遮罩负责。 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <rect width="1024" height="1024" fill="#FFF4EA"/>
+  <circle cx="512" cy="512" r="380" fill="#FBE3D2"/>
+  <path fill="#E2804F" d="M292 420c0-74 29-141 76-190l43 95c31-14 65-22 101-22s70 8 101 22l43-95c47 49 76 116 76 190v100c0 121-98 219-220 219S292 641 292 520z"/>
+  <circle cx="423" cy="461" r="21" fill="#FFF4EA"/>
+  <circle cx="601" cy="461" r="21" fill="#FFF4EA"/>
+  <path d="M462 560c28 22 72 22 100 0" fill="none" stroke="#FFF4EA" stroke-width="24" stroke-linecap="round"/>
+  <path d="M332 768C420 700 520 700 690 560" fill="none" stroke="#2F8F83" stroke-width="44" stroke-linecap="round"/>
+  <circle cx="332" cy="768" r="32" fill="#2F8F83"/>
+  <circle cx="480" cy="691" r="32" fill="#2F8F83"/>
+  <circle cx="690" cy="560" r="32" fill="#2F8F83"/>
+</svg>
