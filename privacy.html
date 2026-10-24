@@ -16,7 +16,7 @@
 <main>
   <p class="eyebrow">Privacy</p>
   <h1>Privacy Policy</h1>
-  <p class="meta">Effective and last updated: October 18, 2026</p>
+  <p class="meta">Effective and last updated: October 22, 2026</p>
   <div class="notice"><strong>Your privacy:</strong> CatCoach has no accounts. Your cat profiles, plans, and logs are stored on your iPhone, and your first plan is built there. Only if you allow it, AI adjusts later rounds: the details needed are then sent to our server and our AI model provider (currently DeepSeek), without your name, contact details, location, or advertising identifiers. We don't sell data, show ads, or track you across apps or websites.</div>
 
   <h2>1. Who we are</h2>
@@ -44,7 +44,7 @@
     <li>the plan length, the app language, and random request and session IDs, used to avoid duplicate processing and to match a vet-clearance confirmation to the right behavior check.</li>
   </ul>
   <p>You can withdraw permission at any time in the app under Settings, "Use AI to adjust plans". Plans are then adjusted on your device.</p>
-  <p>The request doesn't include your cat's name, any text you type, photos, your location, or an account. It does carry a random ID that the app creates when it's installed, used only to authenticate the request with our server. That ID isn't linked to your Apple Account or to your device's hardware or advertising identifiers, and our server doesn't store it. Our server keeps the generated result for about 10 minutes so a retried request isn't processed twice, then deletes it. We don't keep the request content after it's processed. Our server passes only the cat, home, and answer details to the AI model provider; it uses the medical risk level and the IDs for its own checks and doesn't pass them on. The AI model provider processes the request on our behalf to return the plan.</p>
+  <p>The request doesn't include your cat's name, any text you type, photos, your location, or an account. It carries a random installation ID used to authenticate the request; that ID isn't linked to your Apple Account, hardware or advertising identifiers, and our server doesn't store it. It also carries the anonymous RevenueCat app user ID described in section 4. Our server checks that ID with RevenueCat to confirm an active purchase before allowing an AI request. The RevenueCat ID is never sent to DeepSeek. To limit abuse and service costs, our server stores keyed hashes derived from that purchase ID and your IP address, with usage counters, until the next UTC day (at most 24 hours). These counters contain no raw purchase IDs, IP addresses or plan content. Our server keeps the generated result for about 10 minutes so a retried request isn't processed twice, then deletes it. We don't keep request content after processing. Our server passes only the cat, home, and answer details to the AI model provider; it uses the medical risk level and the IDs for its own checks and doesn't pass them on. The AI model provider processes the request on our behalf to return the plan.</p>
   <p>Our website and API are hosted on Cloudflare, which processes network information such as IP addresses and request logs to deliver and protect the service. We do not add analytics, advertising trackers or cookies to this website, and we do not store IP addresses with plan data.</p>
 
   <h2>4. Purchases</h2>
@@ -72,6 +72,7 @@
   <ul>
     <li>On-device data: until you erase it or delete the app.</li>
     <li>Plan generation results on our server: about 10 minutes.</li>
+    <li>Hashed identifiers and AI usage counters: until the next UTC day, at most 24 hours.</li>
     <li>Plan requests sent to DeepSeek: under DeepSeek's own API data retention terms, which we don't control.</li>
     <li>Purchase records at RevenueCat and Apple: as long as needed to provide and verify your purchases, and as required by law.</li>
     <li>Support emails: as long as needed to handle your request.</li>
