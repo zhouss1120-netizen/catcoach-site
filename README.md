@@ -36,3 +36,7 @@ All navigation uses relative `.html` URLs and works under a repository subpath. 
 After deployment, run the main project's `tools/configure_public_site.py --base-url https://catcoach-bos.pages.dev/`. This updates the app's shared public URL configuration and App Store metadata. Do not use an example URL as the real privacy URL.
 
 Preview locally: `python3 -m http.server 8080 --directory website` from the main project root, or run `python3 -m http.server 8080` inside this directory.
+
+## Artwork and current flow (2026-10-25)
+
+All public pages use the approved original A4 window-cat icon. The hero reuses the app’s window scene; the three WebP previews derive from the approved App Store question, roadmap and progress panels. The roadmap preview excludes paid task steps. CatCoach supports iPhone and iPad; local records do not automatically sync. Settings data controls live under Data & Privacy, with no personalization toggle or sharing-details page. Per-round processing is explained beside generation, with an on-device alternative.
